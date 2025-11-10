@@ -1,0 +1,15 @@
+---
+import { NAV_ITEMS } from "../config";
+
+---
+<header>
+    <div class="nav">
+        {
+            NAV_ITEMS.map(i => {
+                return (
+                    <a aria-label={`Przejdź do strony ${i.name}`} href={i.slug}>{i.name}</a>
+                )
+            })
+        }
+    </div>
+</header>

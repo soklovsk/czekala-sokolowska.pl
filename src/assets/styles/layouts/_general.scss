@@ -1,0 +1,53 @@
+// Containers
+.container {
+    padding-top: var(--padding-container-vertical)
+}
+// Hide/show helpers
+// Forced to use important here, because makes no sense to write too specific selectors here
+.hide-on-desktop, .hide-desktop {
+  @media (min-width: $width-min-m) {
+    display: none !important;
+  }
+}
+.hide-on-mobile, .hide-mobile {
+  @media (max-width: $width-min-m) {
+    display: none !important;
+  }
+}
+.hide, .js-hide {
+  display: none !important;
+  visibility: hidden;
+}
+// no-scroll
+.no-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+.flex-row {
+    @include flex(row);
+}
+.flex-column {
+    @include flex(column);
+}
+.center {
+   @include center();
+}
+.nomargin, .no-margin {
+    margin: 0;
+}
+.no-scrollbar::-webkit-scrollbar {
+   display: none;
+}
+.no-scrollbar {
+   -ms-overflow-style: none;  /* IE and Edge */
+   scrollbar-width: none;  /* Firefox */
+}
+.noselect {
+   -webkit-touch-callout: none; /* iOS Safari */
+     -webkit-user-select: none; /* Safari */
+      -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+         -ms-user-select: none; /* Internet Explorer/Edge */
+             user-select: none; /* Non-prefixed version, currently
+                                   supported by Chrome, Edge, Opera and Firefox */
+}

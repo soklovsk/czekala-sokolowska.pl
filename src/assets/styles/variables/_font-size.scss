@@ -1,0 +1,117 @@
+:root {
+  //
+  // comes XL
+  --font-size-h1-big: 2.9rem;
+  --font-size-h1: 2.4rem;
+  --font-size-h2: 2.4rem;
+  --font-size-h3: 2.2rem;
+  --font-size-t1: 2rem;
+  --font-size-t2: 1.8rem;
+  --font-size-t3: 1.6rem;
+
+
+  // Line-heights
+  --line-height-h1: 4.8rem;
+  --line-height-h2-serif: 3.2rem;
+  --line-height-h1-serif-little: 3.2rem
+  --line-height-h2: 3.2rem;
+  --line-height-h1-little: 3.2rem;
+  --line-height-h2-little: 2.4rem;
+  --line-height-h3-big: 3.2rem;
+  --line-height-h3: 2.4rem;
+  --line-height-t1: 2.4rem;
+  --line-height-t2: 2.4rem;
+  --line-height-small-text: 2.4rem;
+  --line-height-small-text-title: 2.4rem;
+  --line-height-breadcrumbs: 1.6rem;
+  --line-height-navigation: 2rem;
+  --line-height-button: 1.8rem;
+  --line-height-title-in-submenu: 1.6rem;
+  --line-height-subtitle-in-submenu: 1.6rem;
+
+  // Font weights
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-h1-serif: var(--font-weight-regular);
+  --font-weight-h2-serif: var(--font-weight-regular);
+  --font-weight-h1-serif-little: var(--font-weight-regular);
+  --font-weight-h2: var(--font-weight-medium);
+  --font-weight-h1-little: var(--font-weight-medium);
+  --font-weight-h2-little: var(--font-weight-medium);
+  --font-weight-h3-big: var(--font-weight-medium);
+  --font-weight-h3: var(--font-weight-medium);
+  --font-weight-t1: var(--font-weight-regular);
+  --font-weight-t2: var(--font-weight-regular);
+  --font-weight-small-text: var(--font-weight-regular);
+  --font-weight-small-text-title: var(--font-weight-medium);
+  --font-weight-breadcrumbs: var(--font-weight-regular);
+  --font-weight-navigation: var(--font-weight-regular);
+  --font-weight-button: var(--font-weight-regular);
+  --font-weight-title-in-submenu: var(--font-weight-semibold);
+  --font-weight-subtitle-in-submenu: var(--font-weight-regular);
+  // Responsive font sizes 
+  // Comes L
+  @media (max-width: $width-min-xl) {
+    --font-size-h1-serif: 2.7rem;
+    --font-size-h2-serif: 2.6rem;
+    --font-size-h2: 2.1rem;
+    --font-size-h1-little: 2.1rem;
+    --font-size-h2-little: 1.9rem;
+    --font-size-h3-big: 2.1rem;
+    --font-size-h3: 1.9rem;
+    --font-size-t1: 1.7rem;
+  
+    // Line-heights
+    --line-height-h1-serif: 3.2rem;
+  }
+  // Comes M
+  @media (max-width: $width-min-l) {
+    --font-size-h1-serif: 2.5rem;
+    --font-size-h2-serif: 2.1rem;
+    --font-size-h2: 1.9rem;
+    --font-size-h1-little: 1.9rem;
+    --font-size-h2-little: 1.6rem;
+    --font-size-h3-big: 1.9rem;
+    --font-size-h3: 1.7rem;
+    --font-size-t1: 1.6rem;
+    --font-size-t2: 1.5rem;
+    --font-size-navigation: 1.5rem;
+    --font-size-button: 1.5rem;
+  
+    // Line-heights
+    --line-height-h2: 2.4rem;
+    --line-height-h1-little: 2.4rem;
+    --line-height-h3-big: 2.4rem;
+    --line-height-navigation: 1.8rem;
+  }
+  // Comes S
+  @media (max-width: $width-min-m) {
+    --font-size-h2-little: 1.7rem;
+  }
+  // Comes XS
+  @media (max-width: $width-min-m) {
+    --font-size-h1-serif: 2.3rem;
+    --font-size-h2-serif: 2rem;
+    --font-size-h1-little: 1.8rem;
+    --font-size-h2-little: 1.6rem;
+    --font-size-h3-big: 1.8rem;
+    --font-size-t2: 1.4rem;
+    --font-size-small-text: 1.3rem;
+    --font-size-small-text-title: 1.3rem;
+    --font-size-breadcrumbs: 1.2rem;
+    --font-size-button: 1.4rem;
+    --font-size-title-in-submenu: 1.3rem; // only for mobile
+    --font-size-subtitle-in-submenu: 1.2rem; // only for mobile
+  
+    // Line-heights
+    --line-height-h2-serif: 2.4rem;
+    --line-height-button: 1.6rem;
+  }
+  // Comes XXS
+  @media (max-width: $width-min-m) {
+    --font-size-h3: 1.6rem;
+  }
+}

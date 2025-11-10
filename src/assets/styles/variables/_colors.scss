@@ -1,0 +1,13 @@
+:root {
+  --color-black: #151515;
+  --color-beige: #F6F4EE;
+  --color-beige-dark: #F2EFE9;
+  --theme-color: var(--color-beige);
+  --theme-color-contrary: var(--color-black);
+  
+
+  @media (prefers-color-scheme: dark) {
+    --theme-color: var(--color-black);
+    --theme-color-contrary: var(--color-beige);
+  }
+}

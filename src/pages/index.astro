@@ -1,0 +1,22 @@
+---
+import PageLayout from "@src/layouts/PageLayout.astro";
+import DecorativeSvg from '@src/assets/icons/branch.svg';
+import { MY_FULL_NAME, MY_LOCATION, PHONE, SESSION_PRICE, TITLE_OF_THE_THING } from "@src/config";
+
+---
+<PageLayout bodyClass="index">
+	<Fragment slot="main">
+		<div class="content flex-column">
+			<div class="branches-image"><DecorativeSvg /></div>
+			<h2 class="title">{TITLE_OF_THE_THING}</h2>
+			<div class="me">
+				<p class="name">{MY_FULL_NAME}</p>
+				<p class="contact">kontakt:&nbsp;{PHONE}</p>
+			</div>
+			<div class="details">
+				<p class="location">{MY_LOCATION}</p>
+				<p class="price">cena wizyty:&nbsp;{SESSION_PRICE}zł</p>
+			</div>
+		</div>
+	</Fragment>
+</PageLayout>
