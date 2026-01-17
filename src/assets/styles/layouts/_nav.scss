@@ -1,0 +1,12 @@
+#main-nav {
+    --_gap-nav-els: 4rem;
+
+    @media(max-width: $width-min-m) {
+        --_gap-nav-els: 2rem;
+    }
+    
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    gap: var(--_gap-nav-els);
+}

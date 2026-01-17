@@ -1,0 +1,18 @@
+body {
+    background-color: var(--color-body-background);
+    display: flex;
+    justify-content: center;
+}
+#page {
+    padding: var(--site-padding-top) 0;
+    margin: 0 var(--site-padding-horizontal);
+    max-width: var(--page-max-width);
+    height: 100%;
+    flex-grow: 1;
+}
+#main {
+    margin-top: var(--margin-top-main-content);
+    h1:first-child {
+        margin-top: 0;
+    }
+}

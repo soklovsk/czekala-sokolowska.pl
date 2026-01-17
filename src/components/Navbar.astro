@@ -3,11 +3,11 @@ import { NAV_ITEMS } from "../config";
 
 ---
 <header>
-    <div class="nav">
+    <div id='main-nav' class="nav">
         {
             NAV_ITEMS.map(i => {
                 return (
-                    <a aria-label={`Przejdź do strony ${i.name}`} href={i.slug}>{i.name}</a>
+                    <a class="font-nav" aria-label={`Przejdź do strony ${i.name}`} href={i.slug}>{i.name}</a>
                 )
             })
         }

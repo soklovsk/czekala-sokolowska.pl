@@ -1,0 +1,84 @@
+// stylelint-disable declaration-property-unit-allowed-list
+// Everything around fonts, font size definitions and typeset
+// presets. No modular scale, but a sophisticated viewport
+// based responsive mixin can be found in _helpers.scss
+
+// Set root size for rems
+html {
+  font-size: 62.5%;
+}
+:root {
+  font-size: 62.5%; // base is 10 px !
+  font-display: block;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Fonty COMES */
+$fonts-list: ( 
+  'h1',  
+  'paragraph',
+  'nav',
+  );
+@mixin get-font( $font-name ) {
+  /* accepted fonts above in $fonts-list */
+  font-size: var(--font-size-#{$font-name});
+  line-height: var(--line-height-#{$font-name});
+  font-weight: var(--font-weight-#{$font-name});
+  font-family: var(--font-family-#{$font-name});
+  color: var(--color-text);
+  b,
+  strong {
+    font-weight: var(--font-weight-bold);
+  }
+}
+h1 {
+  margin-top: var(--margin-top-h1);
+  margin-bottom: var(--margin-bottom-h1);
+}
+body {
+  @include get-font('paragraph');
+}
+
+h1, .font-h1 {
+  @include get-font('h1');
+}
+nav, .nav, .font-nav {
+  @include get-font('nav');
+}
+//
+// Only sometimes hrefs are blue – mostly grey. Usually blue, when inside <paragraphs> 
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+// Default paragraphs
+p, li, span, b, strong, body {
+  @include get-font('t1');
+}
+.font-text,
+.text,
+.text > p,
+.text > span,
+.text > strong,
+.text > a,
+.font-text > p,
+.font-t1 > span,
+.font-text > strong,
+.font-text > a,
+p,
+p > *,
+span,
+li,
+ul,
+ol {
+  @include get-font('paragraph');
+}
+p {
+  margin: var(--margin-between-paragraphs) 0;
+}
+// Italic
+em,
+i {
+  font-style: italic;
+}

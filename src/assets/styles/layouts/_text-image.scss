@@ -1,0 +1,26 @@
+.text-image {
+    .grid-content {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: var(--grid-gap);
+        
+        .text {
+            grid-column: 1 / span 3;
+        }
+        .image {
+            padding-top: 2.4rem;
+            grid-column: 4 / span 1;
+        }
+    }
+    @media (max-width: $width-min-m) {
+        .grid-content {            
+            .text {
+                grid-column: 1 / span 4;
+            }
+            .image {
+                padding: 0;
+                grid-column: 2 / span 2;
+            }
+        }
+    }
+}

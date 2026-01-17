@@ -1,16 +1,11 @@
 ---
-
 // Load fonts
 import '@fontsource/maitree';
 // Import the main styles file here so that it is included on all pages
-import "@src/assets/styles/main.scss"; // load overriding styles
+import "@src/assets/styles/main.scss"; 
 import { THEME_COLOR } from '../config';
 import Footer from '../components/Footer.astro';
 import Navbar from '../components/Navbar.astro';
-//
-// Components
-
-
 export interface Props {
   bodyClass : string,
   mainClass?: string,
@@ -46,7 +41,7 @@ const { bodyClass, mainClass } = Astro.props
   <body class=`site-wrapper no-js ${bodyClass}`>
     <div id="page" class="site">
       <Navbar />
-      <main id="main" class=["site-main, mainClass].join(' ') role="main">
+      <main id="main" class={["site-main", "mainClass"].join(' ')} role="main">
         <slot name="main" />
       </main>
       <Footer />

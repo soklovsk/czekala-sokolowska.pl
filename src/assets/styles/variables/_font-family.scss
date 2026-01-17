@@ -1,10 +1,7 @@
 :root {
   --font-primary: 'Maitree', serif;
   // Fonts in use for content
+  --font-family-paragraph: var(--font-primary);
+  --font-family-nav: var(--font-primary);
   --font-family-h1: var(--font-primary);
-  --font-family-h2: var(--font-primary);
-  --font-family-h3: var(--font-primary);
-  --font-family-t1: var(--font-primary);
-  --font-family-t2: var(--font-primary);
-  --font-family-t3: var(--font-primary);
 }

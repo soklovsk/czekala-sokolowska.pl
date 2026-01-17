@@ -2,20 +2,50 @@
 import PageLayout from "@src/layouts/PageLayout.astro";
 import DecorativeSvg from '@src/assets/icons/branch.svg';
 import { MY_FULL_NAME, MY_LOCATION, PHONE, SESSION_PRICE, TITLE_OF_THE_THING } from "@src/config";
+import { getEntry, render } from "astro:content";
+import MeImage from '@src/assets/images/me.png';
+import { Image } from "astro:assets";
 
+let aboutMed = await getEntry('pages', 'o-medycynie-chinskiej'),
+	aboutMe = await getEntry('pages', 'o-mnie');
+if(!aboutMed || !aboutMe) {
+	throw 'Entry missing: "O medycynie chińskiej" OR "O mnie"'
+}
+
+let ContentAboutMed = (await render(aboutMed)).Content,
+	ContentAboutMe = (await render(aboutMe)).Content;
 ---
 <PageLayout bodyClass="index">
 	<Fragment slot="main">
 		<div class="content flex-column">
-			<div class="branches-image"><DecorativeSvg /></div>
-			<h2 class="title">{TITLE_OF_THE_THING}</h2>
-			<div class="me">
-				<p class="name">{MY_FULL_NAME}</p>
-				<p class="contact">kontakt:&nbsp;{PHONE}</p>
+			<div class="top">
+				<div class="branches-image"><DecorativeSvg /></div>
+				<h1 class="title">{TITLE_OF_THE_THING}</h1>
+				<div class="me">
+					<p class="name">{MY_FULL_NAME}</p>
+					<p class="contact">kontakt:&nbsp;<a href=`tel:+48${PHONE}`>{PHONE}</a></p>
+				</div>
 			</div>
-			<div class="details">
+			<div class="bottom">
 				<p class="location">{MY_LOCATION}</p>
 				<p class="price">cena wizyty:&nbsp;{SESSION_PRICE}zł</p>
+			</div>
+		</div>
+		<div class="content content-mobile hide-desktop flex-column">
+			<div class="grid-content about-me">
+				<div class="text">
+					<ContentAboutMe />
+				</div>
+				<div class="image">
+					<Image alt="" src={MeImage} />
+				</div>
+			</div>
+			<div class="grid-content about-med">
+				<div class="text">
+					<ContentAboutMed />
+				</div>
+				<div class="image">
+				</div>
 			</div>
 		</div>
 	</Fragment>

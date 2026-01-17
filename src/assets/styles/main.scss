@@ -1,7 +1,10 @@
-// Import order is no random
+// Sanitize
+@import './sanitize/index.scss';
 // variables
 @import './variables/index.scss';
 // helpers
 @import './helpers/index.scss';
 // layouts
 @import './layouts/index.scss';
+// pages
+@import './pages/index.scss';

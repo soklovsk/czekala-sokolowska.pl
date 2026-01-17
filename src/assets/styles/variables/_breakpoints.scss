@@ -1,15 +1,9 @@
 // Layout widths
-$width-min-xxs: 250px;
-$width-min-xs: 360px;
 $width-min-s: 452px;
 $width-min-m: 728px;
 $width-min-l: 1024px;
-$width-min-xl: 1312px;
 :root {
-  --width-min-xxs: #{$width-min-xxs};
-  --width-min-xs: #{$width-min-xs};
   --width-min-s: #{$width-min-s};
   --width-min-m: #{$width-min-m};
   --width-min-l: #{$width-min-l};
-  --width-min-xl: #{$width-min-xl};
 }

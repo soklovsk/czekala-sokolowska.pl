@@ -1,10 +1,21 @@
 ---
+import { getEntry, render } from "astro:content";
 import PageLayout from "../layouts/PageLayout.astro";
 
-
+let entry = await getEntry('pages', 'o-medycynie-chinskiej');
+if(!entry) {
+	throw 'Entry missing: O medycynie chińskiej'
+}
+let {Content} = await render(entry);
 ---
-<PageLayout bodyClass="index">
+<PageLayout bodyClass="index text-image">
 	<Fragment slot="main">
-		
+		<div class="grid-content">
+			<div class="text">
+				<Content />
+			</div>
+			<div class="image">
+			</div>
+		</div>
 	</Fragment>
 </PageLayout>

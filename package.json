@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@fontsource/maitree": "^5.2.8",
-    "astro": "^5.15.3"
+    "astro": "^5.15.3",
+    "slug": "^11.0.1"
   },
   "devDependencies": {
+    "@types/slug": "^5.0.9",
     "sass-embedded": "^1.93.2"
   }
 }

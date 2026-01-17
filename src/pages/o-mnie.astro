@@ -1,10 +1,25 @@
 ---
+import { render } from "astro:content";
 import PageLayout from "../layouts/PageLayout.astro";
+import { getEntry } from 'astro:content';
+import MeImage from '@src/assets/images/me.png';
+import { Image } from "astro:assets";
 
-
+const entry = await getEntry('pages', 'o-mnie');
+if(!entry) {
+	throw 'Entry missing: O mnie'
+}
+let {Content} = await render(entry);
 ---
-<PageLayout bodyClass="index">
+<PageLayout bodyClass="about-me text-image">
 	<Fragment slot="main">
-		
+		<div class="grid-content">
+			<div class="text">
+				<Content />
+			</div>
+			<div class="image">
+				<Image alt="" src={MeImage} />
+			</div>
+		</div>
 	</Fragment>
 </PageLayout>
