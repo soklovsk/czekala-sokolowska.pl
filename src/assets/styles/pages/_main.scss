@@ -1,18 +1,19 @@
 body.index {
     --_site-title-margin: 5.6rem 0 5.4rem 0;
-    --_title-font-size: 2.9rem;
-    --_name-font-size: 2.4rem;
-    --_contact-font-size: 2.2rem;
-    --_font-size-bottom: 2rem;
-    --_margin-bottom: 8.8rem; 
-    --_margin-contact: 13.8rem;
+    --_title-font-size: 2.8rem;
+    --_name-font-size: 2.3rem;
+    --_contact-font-size: 2.1rem;
+    --_font-size-bottom: 1.9rem;
+    --_margin-bottom: 0; 
+    --_margin-contact: 12rem;
+    --_mobile-margin-top: 3.2rem;
     @media (max-width: $width-min-m) {
         --_site-title-margin: 4.8rem 0 4.8rem 0;
         --_title-font-size: 2.6rem;
         --_name-font-size: 2.2rem;
         --_contact-font-size: 2rem;
         --_font-size-bottom: 1.8rem;
-        --_margin-bottom: 6rem; 
+        --_margin-bottom: 0; 
         --_margin-contact: 8.8rem;
     }
     @media (max-width: $width-min-s) {
@@ -21,11 +22,11 @@ body.index {
         --_name-font-size: 1.8rem;
         --_contact-font-size: 1.6rem;
         --_font-size-bottom: 1.6rem;
-        --_margin-bottom: 1.2rem; 
+        --_margin-bottom: 2.4rem; 
         --_margin-contact: 6rem;
     }
     @media (max-width: $width-min-m) {
-
+        // --site-padding-top: 0;
         #main-nav {
             display: none;
         }
@@ -45,7 +46,7 @@ body.index {
         flex-direction: column;
         flex-grow: 0;
         gap: 0;
-        margin-top: auto;
+        margin: auto;
         @media (max-width: $width-min-s) {
             margin: auto;
         }
@@ -57,7 +58,8 @@ body.index {
             .branches-image {
 
                 @media (max-width: $width-min-m) {
-                    display: none;
+                    // display: none;
+                    margin-top: .8rem;
                 }
             }
             h1 {
@@ -68,8 +70,11 @@ body.index {
             .me {
                 display: flex;
                 flex-direction: column;
-                gap: var(--gap);
+                gap: calc(var(--gap) + 1rem);
                 margin-bottom: var(--_margin-contact);
+                p {
+                    margin: 0;
+                }
                 .name {
                     font-size: var(--_name-font-size);
                 }
@@ -81,10 +86,18 @@ body.index {
         .bottom {
             display: flex;
             flex-direction: column;
-            gap: .8rem;
+            gap: 2.2rem;
             margin-bottom: var(--_margin-bottom);
             > * {
                 font-size: var(--_font-size-bottom);
+            }
+            p {
+                margin: 0;
+            }
+        }
+        @media (max-width: $width-min-m) {
+            p {
+                --margin-between-paragraphs: .4rem;
             }
         }
     }
@@ -92,9 +105,15 @@ body.index {
         // mobile
         background-color: var(--color-background-main-page-about-me);
         margin: 0 calc(-1 * var(--site-padding-horizontal));
-        padding: 2.4rem var(--site-padding-horizontal);
+        padding: var(--_mobile-margin-top) var(--site-padding-horizontal) ;
+        .image {
+            margin-top: var(--_mobile-margin-top);
+        }
+        p, span, a { text-align: left };
+
     }
     .about-med {
-        padding-top: 2.4rem;
+        padding-top: var(--_mobile-margin-top);
+        p, span, a { text-align: left };
     }
 }

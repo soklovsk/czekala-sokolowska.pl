@@ -4,7 +4,7 @@
   --font-size-nav: 1.8rem;
   // Line-heights
   --line-height-paragraph: 2.6rem;
-  --line-height-h1: 100%;
+  --line-height-h1: 4rem;
   --line-height-nav: 100%;
 
   // Font weights
@@ -20,6 +20,6 @@
     --font-size-nav: 1.6rem;
   }
   @media (max-width: $width-min-s) {
-    --font-size-h1: 1.8rem;
+    --font-size-h1: 2rem;
   }
 }
