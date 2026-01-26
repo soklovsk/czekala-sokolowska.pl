@@ -5,6 +5,7 @@ import { MY_FULL_NAME, MY_LOCATION, PHONE, SESSION_PRICE, TITLE_OF_THE_THING } f
 import { getEntry, render } from "astro:content";
 import MeImage from '@src/assets/images/me.png';
 import { Image } from "astro:assets";
+import { SEO } from "astro-seo";
 
 let aboutMed = await getEntry('pages', 'o-medycynie-chinskiej'),
 	aboutMe = await getEntry('pages', 'o-mnie');
@@ -14,8 +15,16 @@ if(!aboutMed || !aboutMe) {
 
 let ContentAboutMed = (await render(aboutMed)).Content,
 	ContentAboutMe = (await render(aboutMe)).Content;
+
+let seoTitle = `${MY_FULL_NAME} | ${TITLE_OF_THE_THING}`;
+let seoDesc = `${TITLE_OF_THE_THING}`
 ---
 <PageLayout bodyClass="index">
+	<SEO
+		title={seoTitle}
+		description={seoDesc}
+		slot="seo"
+	/>
 	<Fragment slot="main">
 		<div class="content flex-column">
 			<div class="top">

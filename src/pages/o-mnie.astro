@@ -4,6 +4,7 @@ import PageLayout from "../layouts/PageLayout.astro";
 import { getEntry } from 'astro:content';
 import MeImage from '@src/assets/images/me.png';
 import { Image } from "astro:assets";
+import { SEO } from "astro-seo";
 
 const entry = await getEntry('pages', 'o-mnie');
 if(!entry) {
@@ -12,13 +13,14 @@ if(!entry) {
 let {Content} = await render(entry);
 ---
 <PageLayout bodyClass="about-me text-image">
+	<SEO noindex={true} slot="seo" />
 	<Fragment slot="main">
 		<div class="grid-content">
 			<div class="text">
 				<Content />
 			</div>
 			<div class="image">
-				<Image alt="" src={MeImage} />
+				<Image alt="" src={MeImage} width={450} />
 			</div>
 		</div>
 	</Fragment>

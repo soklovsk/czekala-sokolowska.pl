@@ -6,14 +6,14 @@ body.index {
     --_font-size-bottom: 1.9rem;
     --_margin-bottom: 0; 
     --_margin-contact: 12rem;
-    --_mobile-margin-top: 3.2rem;
+    --_mobile-margin-top: 2.4rem;
     @media (max-width: $width-min-m) {
         --_site-title-margin: 4.8rem 0 4.8rem 0;
         --_title-font-size: 2.6rem;
         --_name-font-size: 2.2rem;
         --_contact-font-size: 2rem;
         --_font-size-bottom: 1.8rem;
-        --_margin-bottom: 0; 
+        --_margin-bottom: 2.4rem; 
         --_margin-contact: 8.8rem;
     }
     @media (max-width: $width-min-s) {
@@ -108,6 +108,9 @@ body.index {
         padding: var(--_mobile-margin-top) var(--site-padding-horizontal) ;
         .image {
             margin-top: var(--_mobile-margin-top);
+            max-width: 24rem;
+            margin-left: auto;
+            margin-right: auto;
         }
         p, span, a { text-align: left };
 
