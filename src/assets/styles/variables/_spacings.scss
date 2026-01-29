@@ -18,7 +18,7 @@ $gap-l: 2.4rem;
 
     --site-padding-horizontal-l: 8rem;
     --site-padding-horizontal-m: 4rem;
-    --site-padding-horizontal-s: 1.6rem;
+    --site-padding-horizontal-s: 2rem;
 
     --site-padding-horizontal: var(--site-padding-horizontal-s);
     --gap: var(--gap-s);
@@ -39,7 +39,7 @@ $gap-l: 2.4rem;
     --margin-bottom-h1: 1.6rem;
     --margin-top-h1: 1.6rem;
     @media(max-width: $width-min-m) {
-        --margin-between-paragraphs: .8rem;
+        --margin-between-paragraphs: 1rem;
         --margin-bottom-h1: 1.2rem;
     }
 }
