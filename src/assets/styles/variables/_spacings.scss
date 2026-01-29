@@ -35,11 +35,11 @@ $gap-l: 2.4rem;
         --margin-top-main-content: 4.8rem;
     }
     // margins for font
-    --margin-between-paragraphs: 1.6rem;
+    --margin-between-paragraphs: 1.2rem;
     --margin-bottom-h1: 1.6rem;
     --margin-top-h1: 1.6rem;
     @media(max-width: $width-min-m) {
-        --margin-between-paragraphs: 1.6rem; 
+        --margin-between-paragraphs: 1rem;
         --margin-bottom-h1: 1.2rem;
     }
 }
