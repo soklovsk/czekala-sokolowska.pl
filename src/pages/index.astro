@@ -24,6 +24,9 @@ let seoDesc = `${TITLE_OF_THE_THING}`
 		title={seoTitle}
 		description={seoDesc}
 		slot="seo"
+		openGraph={{
+			basic: {image: '/web-app-manifest-512x512.png', title: '', url: '/web-app-manifest-512x512.png', type:''}
+		}}
 	/>
 	<Fragment slot="main">
 		<div class="content flex-column">
