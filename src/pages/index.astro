@@ -1,7 +1,7 @@
 ---
 import PageLayout from "@src/layouts/PageLayout.astro";
 import DecorativeSvg from '@src/assets/icons/branch.svg';
-import { MY_FULL_NAME, MY_LOCATION, PHONE, SESSION_PRICE, TITLE_OF_THE_THING } from "@src/config";
+import { MY_FULL_NAME, MY_LOCATION, BOOK_INFO, PHONE, SESSION_PRICE, TITLE_OF_THE_THING } from "@src/config";
 import { getEntry, render } from "astro:content";
 import MeImage from '@src/assets/images/me.png';
 import { Image } from "astro:assets";
@@ -39,7 +39,7 @@ let seoDesc = `${TITLE_OF_THE_THING}`
 				</div>
 			</div>
 			<div class="bottom">
-				<p class="location">{MY_LOCATION}</p>
+				<p class="location">{MY_LOCATION}<br/>{BOOK_INFO}</p>
 				<p class="price">cena wizyty:&nbsp;{SESSION_PRICE}zł</p>
 			</div>
 		</div>
